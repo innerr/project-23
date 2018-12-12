@@ -34,3 +34,18 @@ function pd_ctl()
 	bin/pd-ctl -u "http://$ip:13579" -d $1
 }
 export -f pd_ctl
+
+function stop()
+{
+	local name="$1"
+	local pid=`get_pid $1`
+	if [ ! -z "$pid" ]; then
+		kill $pid
+	fi
+	sleep 0.2
+	pid=`get_pid $1`
+	if [ ! -z "$pid" ]; then
+		kill -9 $pid
+	fi
+}
+export -f stop
