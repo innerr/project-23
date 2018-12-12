@@ -17,7 +17,7 @@ echo "=> run tikv"
 ./run_tikv.sh &
 
 echo "=> run theflash"
-./run_theflash.sh true
+./run_theflash.sh true false
 
 sleep 4
 
