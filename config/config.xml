@@ -6,8 +6,8 @@
 
     <logger>
         <level>trace</level>
-        <log>/tmp/theflash/running/server.log</log>
-        <errorlog>/tmp/theflash/running/error.log</errorlog>
+        <log>/tmp/theflash/server.log</log>
+        <errorlog>/tmp/theflash/error.log</errorlog>
         <size>1000M</size>
         <count>10</count>
         <!-- <console>1</console> --> <!-- Default behavior is autodetection (log to console if not daemon mode and is tty) -->
@@ -23,7 +23,7 @@
 
     <raft>
         <service_addr>0.0.0.0:3930</service_addr>
-        <kvstore_path>/data/theflash/kvstore</kvstore_path>
+        <kvstore_path>/tmp/theflash/kvstore</kvstore_path>
     </raft>
 
     <!-- Don't exit if ipv6 or ipv4 unavailable, but listen_host with this protocol specified -->
@@ -66,10 +66,10 @@
     <persisted_mapping_cache_size>0</persisted_mapping_cache_size>
 
     <!-- Path to data directory, with trailing slash. -->
-    <path>/tmp/theflash/running/db</path>
+    <path>/tmp/theflash/db</path>
 
     <!-- Path to temporary data for processing hard queries. -->
-    <tmp_path>/tmp/theflash/running/tmp</tmp_path>
+    <tmp_path>/tmp/theflash/tmp</tmp_path>
 
     <l0_optimize>false</l0_optimize>
 
