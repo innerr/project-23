@@ -1,0 +1,11 @@
+[optional]
+go-ycsb (build from https://github.com/pingcap/go-ycsb)
+tidb-server (build from tidb branch master)
+rng (build from https://github.com/overvenus/rngine)
+
+[requred]
+pd-server (build from pd branch master)
+pd-ctl (build from pd branch master)
+tikv-ctl (build from tikv branch rngine)
+tikv-server-master (build from tikv branch master)
+tikv-server-rngine (build from tikv branch rngine)

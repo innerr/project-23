@@ -1,0 +1,11 @@
+log-level = "info"
+persist-interval = '5m'
+
+[rocksdb]
+
+[rocksdb.defaultcf]
+
+[rocksdb.writecf]
+
+[rocksdb.lockcf]
+
