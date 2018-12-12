@@ -18,3 +18,4 @@ function check()
 check pd-server
 check tikv-server-master
 check tikv-server-rngine
+check tidb-server

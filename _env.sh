@@ -22,7 +22,7 @@ function get_pid()
 	local pid=`ps -ef | grep $name | grep -v grep`
 	local pid_count=`echo "$pid" | wc -l | awk '{print $1}'`
 	if [ "$pid_count" != "1" ]; then
-		echo "$name pid count: $pid_count != 1, exiting..."
+		echo "$name pid count: $pid_count != 1, exiting..." >&2
 		exit 1
 	fi
 	echo $pid | awk '{print $2}'

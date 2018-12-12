@@ -20,3 +20,6 @@ stop tikv-server-master
 
 echo "=> stop tikv-server-rngine"
 stop tikv-server-rngine
+
+echo "=> stop tidb"
+stop tidb-server

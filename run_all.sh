@@ -21,6 +21,11 @@ sleep 2
 echo "=> run rngine"
 ./run_rngine.sh &
 
+sleep 2
+
+echo "=> run tidb"
+./run_tidb.sh &
+
 ./check_all.sh
 
 ./pd_ctl.sh op add add-learner 2 4
