@@ -11,23 +11,26 @@ echo "=> remove all data"
 echo "=> run pd"
 ./run_pd.sh &
 
-sleep 3
+sleep 5
 
 echo "=> run tikv"
 ./run_tikv.sh &
 
-sleep 2
+echo "=> run theflash"
+./run_theflash.sh true
+
+sleep 4
 
 echo "=> run rngine"
 ./run_rngine.sh &
 
-sleep 2
+sleep 3
 
 echo "=> run tidb"
 ./run_tidb.sh &
 
 ./check_all.sh
 
-./pd_ctl.sh op add add-learner 2 4
-./pd_ctl.sh config set max-merge-region-keys 0 1>/dev/null
-./pd_ctl.sh config set max-merge-region-size 0 1>/dev/null
+pd_ctl "op add add-learner 2 4"
+pd_ctl "config set max-merge-region-keys 0" 1>/dev/null
+pd_ctl "config set max-merge-region-size 0" 1>/dev/null

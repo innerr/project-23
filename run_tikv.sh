@@ -7,7 +7,7 @@ exec bin/tikv-server-master \
     --addr "0.0.0.0:20431" \
     --advertise-addr "$ip:20431" \
     --pd "$ip:13579" \
-    --data-dir "./data.tikv" \
+    --data-dir "./data/tikv" \
     --log-level info \
-    --config tikv.toml \
+    --config config/tikv.toml \
     --log-file "./log/tikv.log" 2>> "./log/tikv_stderr.log"

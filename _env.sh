@@ -19,7 +19,7 @@ mkdir -p "./log"
 function get_pid()
 {
 	local name="$1"
-	local pid=`ps -ef | grep $name | grep -v grep`
+	local pid=`ps -ef | grep bin/$name | grep -v grep`
 	local pid_count=`echo "$pid" | wc -l | awk '{print $1}'`
 	if [ "$pid_count" != "1" ]; then
 		echo "$name pid count: $pid_count != 1, exiting..." >&2
@@ -28,3 +28,9 @@ function get_pid()
 	echo $pid | awk '{print $2}'
 }
 export -f get_pid
+
+function pd_ctl()
+{
+	bin/pd-ctl -u "http://$ip:13579" -d $1
+}
+export -f pd_ctl

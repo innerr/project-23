@@ -8,5 +8,5 @@ exec bin/tidb-server \
     --status="12491" \
     --advertise-address="$ip" \
     --path="$ip:13579" \
-    --config="tidb.toml" \
+    --config="config/tidb.toml" \
     --log-file="log/tidb.log" 2>> "log/tidb_stderr.log"

@@ -8,6 +8,11 @@ function stop()
 	local name="$1"
 	local pid=`get_pid $1`
 	if [ ! -z "$pid" ]; then
+		kill $pid
+	fi
+	sleep 0.2
+	pid=`get_pid $1`
+	if [ ! -z "$pid" ]; then
 		kill -9 $pid
 	fi
 }
@@ -23,3 +28,6 @@ stop tikv-server-rngine
 
 echo "=> stop tidb"
 stop tidb-server
+
+echo "=> stop theflash"
+stop theflash
