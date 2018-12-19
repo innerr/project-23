@@ -17,6 +17,6 @@ function check()
 
 check pd-server
 check tikv-server-master
+check theflash
 check tikv-server-rngine
 check tidb-server
-check theflash
