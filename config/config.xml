@@ -23,7 +23,7 @@
 
     <raft>
         <service_addr>0.0.0.0:3930</service_addr>
-        <kvstore_path>/data/theflash/kvstore</kvstore_path>
+        <kvstore_path>/tmp/theflash/running/kvstore</kvstore_path>
     </raft>
 
     <!-- Don't exit if ipv6 or ipv4 unavailable, but listen_host with this protocol specified -->
