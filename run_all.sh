@@ -6,7 +6,6 @@ source ./_env.sh
 ./stop_all.sh
 
 echo "=> remove all data"
-#./reset.sh
 ./cleanup.sh
 
 echo "=> run pd"
