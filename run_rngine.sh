@@ -3,7 +3,7 @@
 set -ue
 source ./_env.sh
 
-bin/pd-ctl -u "http://$ip:13579" -d config set cluster-version 2.1.0-rc.2
+#bin/pd-ctl -u "http://$ip:13579" -d config set cluster-version 2.1.0-rc.2
 
 exec bin/tikv-server-rngine \
     --addr "0.0.0.0:20432" \

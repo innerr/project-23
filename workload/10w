@@ -1,5 +1,5 @@
-recordcount=1000
-operationcount=100000
+recordcount=100000
+operationcount=10000000
 workload=core
 
 readallfields=true
@@ -10,3 +10,5 @@ scanproportion=0
 insertproportion=0
 
 requestdistribution=zipfian
+
+

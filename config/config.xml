@@ -5,15 +5,20 @@
     </application>
 
     <logger>
-        <level>trace</level>
-        <log>/tmp/theflash/server.log</log>
-        <errorlog>/tmp/theflash/error.log</errorlog>
+        <level>debug</level>
+        <log>/data/theflash/server.log</log>
+        <errorlog>/data/theflash/error.log</errorlog>
         <size>1000M</size>
         <count>10</count>
         <!-- <console>1</console> --> <!-- Default behavior is autodetection (log to console if not daemon mode and is tty) -->
     </logger>
 
     <display_name>the flash</display_name>
+
+    <tidb>
+        <service_ip>127.0.0.1</service_ip>
+        <status_port>10080</status_port>
+    </tidb>
 
     <http_port>8123</http_port>
     <tcp_port>9000</tcp_port>
@@ -23,7 +28,7 @@
 
     <raft>
         <service_addr>0.0.0.0:3930</service_addr>
-        <kvstore_path>/tmp/theflash/kvstore</kvstore_path>
+        <kvstore_path>/data/theflash/kvstore</kvstore_path>
     </raft>
 
     <!-- Don't exit if ipv6 or ipv4 unavailable, but listen_host with this protocol specified -->
@@ -66,10 +71,10 @@
     <persisted_mapping_cache_size>0</persisted_mapping_cache_size>
 
     <!-- Path to data directory, with trailing slash. -->
-    <path>/tmp/theflash/db</path>
+    <path>/data/theflash/db</path>
 
     <!-- Path to temporary data for processing hard queries. -->
-    <tmp_path>/tmp/theflash/tmp</tmp_path>
+    <tmp_path>/data/theflash/tmp</tmp_path>
 
     <l0_optimize>false</l0_optimize>
 

@@ -5,7 +5,7 @@ source ./_env.sh
 
 exec bin/tidb-server \
     -P 12490 \
-    --status="12491" \
+    --status="10080" \
     --advertise-address="$ip" \
     --path="$ip:13579" \
     --config="config/tidb.toml" \
