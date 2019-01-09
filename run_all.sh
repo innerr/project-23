@@ -1,12 +1,21 @@
 #!/bin/bash
 
+cleanup="$1"
+
 set -ue
+
 source ./_env.sh
+
+if [ -z "$cleanup" ]; then
+	cleanup="false"
+fi
 
 ./stop_all.sh
 
-echo "=> remove all data"
-./cleanup.sh
+if [ "$cleanup" == "true" ]; then
+	echo "=> remove all data"
+	./cleanup.sh
+fi
 
 echo "=> run pd"
 ./run_pd.sh &
@@ -32,7 +41,3 @@ echo "=> run rngine"
 ./run_rngine.sh &
 
 ./check_all.sh
-
-#pd_ctl "op add add-learner 2 4"
-#pd_ctl "config set max-merge-region-keys 0" 1>/dev/null
-#pd_ctl "config set max-merge-region-size 0" 1>/dev/null

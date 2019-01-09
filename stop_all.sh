@@ -13,7 +13,7 @@ echo "=> stop tikv-server-rngine"
 stop tikv-server-rngine
 
 echo "=> stop tidb"
-stop tidb-server
+stop tidb-server true
 
 echo "=> stop theflash"
-stop theflash
+stop "theflash server"

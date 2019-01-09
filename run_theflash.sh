@@ -3,11 +3,11 @@
 deamon="$1"
 run_rngine="$2"
 
-if [ "$deamon" ]; then
+if [ -z "$deamon" ]; then
 	deamon="true"
 fi
 
-if [ "$run_rngine" ]; then
+if [ -z "$run_rngine" ]; then
 	run_rngine="true"
 fi
 
