@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export ip="127.0.0.1"
 
 export RUST_BACKTRACE=1
@@ -67,9 +69,7 @@ function stop()
 				echo "   #$i pid $pid closing..."
 			fi
 			kill $pid
-			if [ "$heavy_kill" == "true" ]; then
-				kill $pid
-			fi
+			kill $pid
 		fi
 
 		sleep 1

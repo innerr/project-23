@@ -29,6 +29,7 @@
     <raft>
         <service_addr>0.0.0.0:3930</service_addr>
         <kvstore_path>/data/theflash/kvstore</kvstore_path>
+	<pd_addr>127.0.0.1:13579</pd_addr>
     </raft>
 
     <!-- Don't exit if ipv6 or ipv4 unavailable, but listen_host with this protocol specified -->
@@ -54,7 +55,7 @@
          Cache is used when 'use_uncompressed_cache' user setting turned on (off by default).
          Uncompressed cache is advantageous only for very short queries and in rare cases.
       -->
-    <uncompressed_cache_size>8589934592</uncompressed_cache_size>
+    <uncompressed_cache_size>3589934592</uncompressed_cache_size>
 
     <!-- Approximate size of mark cache, used in tables of MergeTree family.
          In bytes. Cache is single for server. Memory is allocated only on demand.
@@ -168,12 +169,10 @@
     -->
     </compression>
 
-    <!-- Settings to fine tune MergeTree tables. See documentation in source code, in MergeTreeSettings.h -->
-    <!--
     <merge_tree>
         <max_suspicious_broken_parts>5</max_suspicious_broken_parts>
+        <mutable_mergetree_partition_number>40</mutable_mergetree_partition_number>
     </merge_tree>
-    -->
 
     <!-- Protection from accidental DROP.
          If size of a MergeTree table is greater than max_table_size_to_drop (in bytes) than table could not be dropped with any DROP query.

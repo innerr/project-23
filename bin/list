@@ -1,11 +1,11 @@
 [requred]
 theflash (build from theflash branch raft, a soft link is suggested)
 pd-server (build from https://github.com/nolouch/pd branch label-learner)
-tikv-ctl (build from https://github.com/overvenus/tikv branch rngine)
 tikv-server-master (build from tikv branch master)
 tikv-server-rngine (build from https://github.com/overvenus/tikv branch rngine)
+tidb-server (build from tidb branch master)
 
 [optional]
+tikv-ctl (build from https://github.com/overvenus/tikv branch rngine)
 go-ycsb (build from https://github.com/pingcap/go-ycsb)
-tidb-server (build from tidb branch master)
 rng (build from https://github.com/overvenus/rngine)

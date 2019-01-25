@@ -20,4 +20,10 @@ def parse(data):
     for region in res["regions"]:
         print region["id"], region.has_key("approximate_keys") and region["approximate_keys"] or 0
 
-parse(load())
+def main():
+    try:
+        parse(load())
+    except:
+        pass
+
+main()

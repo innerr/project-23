@@ -27,9 +27,9 @@ engine-addr = "127.0.0.1:3930"
 [raftstore]
 raftdb-path = ""
 sync-log = true
-max-leader-missing-duration = "22s"
-abnormal-leader-missing-duration = "21s"
-peer-stale-state-check-interval = "20s"
+#max-leader-missing-duration = "22s"
+#abnormal-leader-missing-duration = "21s"
+#peer-stale-state-check-interval = "20s"
 
 [coprocessor]
 
